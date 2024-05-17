@@ -52,6 +52,7 @@ const Calculator = () => {
         setResult("");
       } else if (isOperator(expression[expression.length - 1])) {
         setResult("Error");
+        setValue("");
       } else {
         const result = evaluateExpression(expression);
         setResult(result.toString());
