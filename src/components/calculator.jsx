@@ -49,7 +49,7 @@ const Calculator = () => {
     const expression = value.trim();
     try {
       if (value.trim() === "") {
-        setResult("Error");
+        setResult("");
       } else if (isOperator(expression[expression.length - 1])) {
         setResult("Error");
         setValue("");
@@ -68,7 +68,9 @@ const Calculator = () => {
       <div className="calculator">
         <div className="display">
           <input type="text" value={value} />
-          <div className="Error">{result}</div>
+          <div className="Error">
+            <p>{result}</p>
+          </div>
         </div>
         <div className="buttons">
           <button onClick={() => handleInput("7")}>7</button>
