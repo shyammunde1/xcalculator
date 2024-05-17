@@ -68,7 +68,7 @@ const Calculator = () => {
       <div className="calculator">
         <div className="display">
           <input type="text" value={value} />
-          <div className="result">{result}</div>
+          <div className="error">{result}</div>
         </div>
         <div className="buttons">
           <button onClick={() => handleInput("7")}>7</button>
