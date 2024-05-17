@@ -79,7 +79,7 @@ const Calculator = () => {
           <button onClick={() => handleInput("*")}>*</button>
           <button onClick={clearInput}>C</button>
           <button onClick={() => handleInput("0")}>0</button>
-          <button className="equal" onClick={calculateResult}>
+          <button className="equal =" onClick={calculateResult}>
             =
           </button>
           <button onClick={() => handleInput("/")}>/</button>
