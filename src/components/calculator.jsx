@@ -42,11 +42,16 @@ const Calculator = () => {
     return result;
   };
 
+  const isOperator = (char) => {
+    return "+-*/".includes(char);
+  };
   const calculateResult = () => {
     const expression = value.trim();
     try {
       if (value.trim() === "") {
         setResult("");
+      } else if (isOperator(expression[expression.length - 1])) {
+        setResult("Error");
       } else {
         const result = evaluateExpression(expression);
         setResult(result.toString());
@@ -79,7 +84,7 @@ const Calculator = () => {
           <button onClick={() => handleInput("*")}>*</button>
           <button onClick={clearInput}>C</button>
           <button onClick={() => handleInput("0")}>0</button>
-          <button className="equal =" onClick={calculateResult}>
+          <button className="equal" onClick={calculateResult}>
             =
           </button>
           <button onClick={() => handleInput("/")}>/</button>
