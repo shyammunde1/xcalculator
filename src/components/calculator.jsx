@@ -49,7 +49,7 @@ const Calculator = () => {
     const expression = value.trim();
     try {
       if (value.trim() === "") {
-        setResult("");
+        setResult("Error");
       } else if (isOperator(expression[expression.length - 1])) {
         setResult("Error");
         setValue("");
