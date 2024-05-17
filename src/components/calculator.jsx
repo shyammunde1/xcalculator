@@ -3,7 +3,7 @@ import "./Calculator.css";
 
 const Calculator = () => {
   const [value, setValue] = useState("");
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState("");
 
   const handleInput = (newValue) => {
     setValue(value + newValue.toString());
@@ -68,7 +68,7 @@ const Calculator = () => {
       <div className="calculator">
         <div className="display">
           <input type="text" value={value} />
-          {result && <div>Error</div>}
+          <div className="Error">{result}</div>
         </div>
         <div className="buttons">
           <button onClick={() => handleInput("7")}>7</button>
